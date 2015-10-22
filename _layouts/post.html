@@ -1,0 +1,17 @@
+---
+layout: page
+comments: true
+author: José Manuel Alberca
+---
+{{% include burger-nav %}}
+<div class="wrapper">
+  <div class="post">
+    <article class="post-content">
+      {{ content }}
+      {% include twitter_plug.html %}
+    </article>
+    {% include comments.html %}
+  </div>
+</div>
+
+{% include scripts.html %}

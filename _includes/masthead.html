@@ -1,0 +1,38 @@
+<header class="masthead-header">
+  <!-- {% include logo.html %} -->
+  <div class="masthead-container">
+    <h1 class="masthead-title">{{ page.title }}</h1>
+    <p class="masthead-meta">
+      <span>
+        <a href="/">Volver</a>
+      </span>
+      {% include read_time.html %}
+      <span>
+        <!-- Whitespace added for readability -->
+        {% assign m = page.date | date: "%-m" %}
+        {{ page.date | date: "%-d" }}
+        {% case m %}
+          {% when '1' %}Enero
+          {% when '2' %}Febrero
+          {% when '3' %}Marzo
+          {% when '4' %}Abril
+          {% when '5' %}Mayo
+          {% when '6' %}Junio
+          {% when '7' %}Julio
+          {% when '8' %}Agosto
+          {% when '9' %}Septiembre
+          {% when '10' %}Octubre
+          {% when '11' %}Noviembre
+          {% when '12' %}Diciembre
+        {% endcase %}
+        {{ page.date | date: "%Y" }}
+      </span>
+      <span>
+
+        <a href="http://solarreflex.es" target="_blank">
+          {% if page.author %}{{ page.author }}{% endif %}
+        </a>
+      </span>
+    </p>
+  </div>
+</header>
